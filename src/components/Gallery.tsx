@@ -1,21 +1,16 @@
 import { motion } from 'framer-motion';
 
-const images = [
-  '/images/img1.jpeg',
-  '/images/img2.jpeg',
-  '/images/img3.jpeg',
-  '/images/img4.jpeg',
-  '/images/img5.jpeg',
-  '/images/img6.jpeg',
-  '/images/img7.jpeg',
-  '/images/img8.jpeg',
-  '/images/img9.jpeg',
-  '/images/img10.jpeg',
-  '/images/img11.jpeg',
-  '/images/img12.jpeg',
-  '/images/img15.jpeg',
-  '/images/img16.jpeg',
-];
+// Use eager glob to get all images as URLs
+const imageModules = import.meta.glob('../assets/images/*.{jpeg,jpg,png}', { eager: true, as: 'url' });
+// filter out specific images used elsewhere if needed, but here we just take the ones from the previous list
+const galleryImages = [
+  'img1.jpeg', 'img2.jpeg', 'img3.jpeg', 'img4.jpeg', 'img5.jpeg', 'img6.jpeg', 
+  'img7.jpeg', 'img8.jpeg', 'img9.jpeg', 'img10.jpeg', 'img11.jpeg', 'img12.jpeg', 
+  'img15.jpeg', 'img16.jpeg'
+].map(name => {
+  const key = Object.keys(imageModules).find(k => k.endsWith(name));
+  return key ? imageModules[key] : null;
+}).filter(Boolean) as string[];
 
 export default function Gallery() {
   return (
@@ -31,7 +26,7 @@ export default function Gallery() {
         </div>
 
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-          {images.map((src, index) => (
+          {galleryImages.map((src, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}

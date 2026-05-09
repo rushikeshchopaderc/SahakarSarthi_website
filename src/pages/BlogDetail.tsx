@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import { useEffect } from 'react';
+import blogImg18 from '../assets/images/img18.jpeg';
 
 const posts = [
   {
@@ -19,7 +20,7 @@ const posts = [
     excerpt: 'A comprehensive guide on the procedures and documentation required for revenue and land matter appeals.',
     date: 'April 12, 2024',
     author: 'Ad. Mahendra',
-    image: '/images/img18.jpeg',
+    image: blogImg18,
     content: 'Revenue courts handle matters related to land records, mutation entries, and agrarian disputes. When approaching a Revenue Court, whether it is the Tehsildar or the Sub-Divisional Officer, documentation is key. You should be prepared with historical 7/12 extracts, mutation records (Ferfar), and relevant sale deeds or inheritance certificates. The process typically involves a local inquiry and a formal hearing. Understanding the hierarchy of these courts—from the Tehsildar up to the Divisional Commissioner—is vital for a successful appeal strategy.'
   },
   {

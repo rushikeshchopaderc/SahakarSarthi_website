@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import heroImg from '../assets/images/img14.jpeg';
 
 export default function Hero() {
   return (
@@ -7,7 +8,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="/images/img14.jpeg" 
+          src={heroImg} 
           alt="Law Firm" 
           className="w-full h-full object-cover opacity-30"
           referrerPolicy="no-referrer"

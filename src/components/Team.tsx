@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { Facebook, Twitter, Linkedin, MapPin } from 'lucide-react';
+import principalImg from '../assets/images/img17.jpeg';
+
 const member = {
   name: 'Ad. Mahendra Suryawanshi',
   role: 'Regional Legal Advisor, BJP, Nashik',
   address: 'DREAMCITI CHS, Samta Nagar, Nashik, Maharashtra 422006',
-  image: '/images/img17.jpeg'
+  image: principalImg
 };
 
 export default function Team() {

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import aboutImg from '../assets/images/img13.jpeg';
 
 export default function About() {
   return (
@@ -14,7 +15,7 @@ export default function About() {
              {/* Main Image */}
             <div className="relative z-10 p-4 bg-white shadow-2xl">
               <img 
-                src="/images/img13.jpeg" 
+                src={aboutImg} 
                 alt="Law Library" 
                 className="w-full transition-all duration-700 hover:scale-105"
                 referrerPolicy="no-referrer"

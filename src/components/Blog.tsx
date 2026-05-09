@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
-
 import { Link } from 'react-router-dom';
+import blogImg18 from '../assets/images/img18.jpeg';
 
 const posts = [
   {
@@ -18,7 +18,7 @@ const posts = [
     excerpt: 'A comprehensive guide on the procedures and documentation required for revenue and land matter appeals.',
     date: 'April 12, 2024',
     author: 'Ad. Mahendra',
-    image: '/images/img18.jpeg'
+    image: blogImg18
   },
   {
     id: 'choosing-legal-advisor',
