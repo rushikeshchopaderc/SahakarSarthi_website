@@ -7,6 +7,7 @@ import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
 import Blog from '../components/Blog';
 import Gallery from '../components/Gallery';
+import Feedbacks from '../components/Feedbacks';
 import Team from '../components/Team';
 import Contact from '../components/Contact';
 
@@ -37,6 +38,7 @@ export default function Home() {
       <Testimonials />
       <Blog />
       <Gallery />
+      <Feedbacks />
       <Team />
       <Contact />
     </>

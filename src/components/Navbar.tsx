@@ -39,6 +39,7 @@ export default function Navbar() {
     { name: 'Home', href: 'hero' },
     { name: 'About', href: 'about' },
     { name: 'Services', href: 'services' },
+    { name: 'Feedbacks', href: 'feedbacks' },
     { name: 'Gallery', href: 'gallery' },
     { name: 'Attorneys', href: 'team' },
     { name: 'Contact', href: 'contact' },
@@ -69,11 +70,10 @@ export default function Navbar() {
         className={`sticky top-0 z-50 transition-all duration-300 bg-brand-navy shadow-xl py-4`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <span className="text-2xl font-serif font-bold text-white tracking-widest uppercase">SahakarSarthi</span>
-          </a>
+          </Link>
 
-          {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <a 
