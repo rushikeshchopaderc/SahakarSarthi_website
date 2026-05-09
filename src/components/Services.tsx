@@ -1,33 +1,41 @@
 import { motion } from 'framer-motion';
 import { Gavel, Users, Shield, Briefcase, Landmark, Scaling } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
+
 const services = [
   {
+    id: 'cooperative-law',
     icon: <Gavel size={32} />,
     title: 'Cooperative Law',
     description: 'Expert guidance on cooperative society registrations, audits, and legal compliance.'
   },
   {
+    id: 'election-matters',
     icon: <Users size={32} />,
     title: 'Election Matters',
     description: 'Strategic legal support for cooperative and regional election disputes.'
   },
   {
+    id: 'trust-ngo-law',
     icon: <Briefcase size={32} />,
     title: 'Trust & NGO Law',
     description: 'Professional advice on public trust registration and management of non-profit entities.'
   },
   {
+    id: 'revenue-land-matters',
     icon: <Landmark size={32} />,
     title: 'Revenue & Land Matters',
     description: 'Full-service support for land titles, revenue appeals, and property documentation.'
   },
   {
+    id: 'civil-litigation',
     icon: <Scaling size={32} />,
     title: 'Civil Litigation',
     description: 'Strategic advocacy in complex civil disputes and mediation processes.'
   },
   {
+    id: 'constitutional-law',
     icon: <Shield size={32} />,
     title: 'Constitutional Law',
     description: 'Expert legal counsel on constitutional rights and legal framework interpretations.'
@@ -69,9 +77,9 @@ export default function Services() {
               <p className="text-brand-navy/60 leading-relaxed mb-6">
                 {service.description}
               </p>
-              <a href="#" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-navy hover:text-brand-gold transition-colors">
+              <Link to={`/service/${service.id}`} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-navy hover:text-brand-gold transition-colors">
                 Read More <div className="w-8 h-[1px] bg-brand-gold"></div>
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

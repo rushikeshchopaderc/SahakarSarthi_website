@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
+
 const posts = [
   {
+    id: 'importance-of-legal-representation',
     title: 'The Importance of Legal Representation',
     excerpt: 'Understanding why having a specialized legal advisor is crucial for cooperative societies and individual rights.',
     date: 'March 30, 2024',
@@ -10,13 +13,15 @@ const posts = [
     image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600&h=400'
   },
   {
+    id: 'revenue-court-expectations',
     title: 'What to Expect in Revenue Court',
     excerpt: 'A comprehensive guide on the procedures and documentation required for revenue and land matter appeals.',
     date: 'April 12, 2024',
     author: 'Ad. Mahendra',
-    image: 'https://images.unsplash.com/photo-1450101496173-78a93a593d18?auto=format&fit=crop&q=80&w=600&h=400'
+    image: '/images/img18.jpeg'
   },
   {
+    id: 'choosing-legal-advisor',
     title: 'How to Choose the Right Legal Advisor',
     excerpt: 'Key factors to consider when selecting a legal partner for your trust or cooperative organization.',
     date: 'April 25, 2024',
@@ -73,9 +78,9 @@ export default function Blog() {
                 {post.excerpt}
               </p>
               
-              <a href="#" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-navy group-hover:text-brand-gold transition-colors">
+              <Link to={`/blog/${post.id}`} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-navy group-hover:text-brand-gold transition-colors">
                 Read More <ArrowRight size={14} />
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

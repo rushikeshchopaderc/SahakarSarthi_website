@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1920&h=1080" 
+          src="/images/img14.jpeg" 
           alt="Law Firm" 
           className="w-full h-full object-cover opacity-30"
           referrerPolicy="no-referrer"

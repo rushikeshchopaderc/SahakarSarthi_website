@@ -14,9 +14,9 @@ export default function About() {
              {/* Main Image */}
             <div className="relative z-10 p-4 bg-white shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=800&h=1000" 
-                alt="Lawyers discussing" 
-                className="w-full grayscale hover:grayscale-0 transition-all duration-700"
+                src="/images/img13.jpeg" 
+                alt="Law Library" 
+                className="w-full transition-all duration-700 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -45,7 +45,7 @@ export default function About() {
               <span className="italic">Your Legal Matters</span>
             </h2>
             <p className="text-brand-navy/70 text-lg mb-8 leading-relaxed">
-              We are a team of dedicated professionals committed to providing the highest quality legal services. Our firm has been built on a foundation of trust, integrity, and exceptional results.
+              Led by Ad. Mahendra Suryawanshi, we are committed to providing the highest quality legal services. Our firm has been built on a foundation of trust, integrity, and exceptional results in cooperative and revenue law.
             </p>
             
             <div className="space-y-6 mb-10">

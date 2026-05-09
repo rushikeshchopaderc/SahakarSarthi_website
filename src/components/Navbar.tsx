@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,12 +17,31 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, id: string) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/#' + id);
+      // Let the home page handle the scroll on mount
+      return;
+    }
+    
+    const element = document.getElementById(id);
+    if (element) {
+      setIsOpen(false);
+      window.scrollTo({
+        top: element.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Attorneys', href: '#team' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: 'hero' },
+    { name: 'About', href: 'about' },
+    { name: 'Services', href: 'services' },
+    { name: 'Gallery', href: 'gallery' },
+    { name: 'Attorneys', href: 'team' },
+    { name: 'Contact', href: 'contact' },
   ];
 
   return (
@@ -56,13 +78,17 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
-                href={link.href} 
+                href={`#${link.href}`}
+                onClick={(e) => scrollToSection(e, link.href)}
                 className="text-sm font-medium text-white/80 hover:text-brand-gold transition-colors tracking-wide"
               >
                 {link.name}
               </a>
             ))}
-            <button className="bg-brand-gold hover:bg-brand-gold/90 text-brand-navy px-6 py-2.5 rounded-none text-xs font-bold uppercase transition-all tracking-widest">
+            <button 
+              onClick={(e) => scrollToSection(e, 'contact')}
+              className="bg-brand-gold hover:bg-brand-gold/90 text-brand-navy px-6 py-2.5 rounded-none text-xs font-bold uppercase transition-all tracking-widest"
+            >
               Consultation
             </button>
           </div>
@@ -86,14 +112,17 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
-                href={link.href} 
-                onClick={() => setIsOpen(false)}
+                href={`#${link.href}`}
+                onClick={(e) => scrollToSection(e, link.href)}
                 className="text-lg font-serif italic text-white"
               >
                 {link.name}
               </a>
             ))}
-            <button className="bg-brand-gold text-brand-navy w-full py-4 rounded-none text-sm font-bold uppercase tracking-widest">
+            <button 
+              onClick={(e) => scrollToSection(e, 'contact')}
+              className="bg-brand-gold text-brand-navy w-full py-4 rounded-none text-sm font-bold uppercase tracking-widest"
+            >
               Free Consultation
             </button>
           </motion.div>
