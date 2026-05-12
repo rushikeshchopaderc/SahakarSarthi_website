@@ -17,7 +17,7 @@ const posts = [
     excerpt: 'A comprehensive guide on the procedures and documentation required for revenue and land matter appeals.',
     date: 'April 12, 2024',
     author: 'Ad. Mahendra',
-    image: '/img/img18.jpeg'
+    image: '/img/img3.jpeg'
   },
   {
     id: 'choosing-legal-advisor',
