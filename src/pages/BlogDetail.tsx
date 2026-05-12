@@ -10,7 +10,7 @@ const posts = [
     excerpt: 'Understanding why having a specialized legal advisor is crucial for cooperative societies and individual rights.',
     date: 'March 30, 2024',
     author: 'Admin',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200&h=600',
+    image: '/img/img1.jpeg',
     content: 'Navigating the legal landscape of cooperative societies requires more than just general legal knowledge. It demands an understanding of specific statutes and the procedural nuances of cooperative courts. A specialized legal advisor ensures that your society remains compliant with audit requirements, handles member disputes fairly, and executes redevelopment or land purchase agreements with full legal protection. In today\'s regulatory environment, professional legal guidance isn\'t just an option—it\'s a necessity for safeguarding the interests of all members.'
   },
   {
@@ -28,7 +28,7 @@ const posts = [
     excerpt: 'Key factors to consider when selecting a legal partner for your trust or cooperative organization.',
     date: 'April 25, 2024',
     author: 'Ad. Mahendra',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200&h=600',
+    image: '/img/img2.jpeg',
     content: 'Selecting the right legal partner is one of the most critical decisions for any organization. Look for expertise in your specific domain—general practice is rarely enough for complex cooperative or trust matters. Consider their track record in local courts and their familiarity with regional administrative bodies. Beyond technical skill, choose someone who prioritizes transparent communication and demonstrates a genuine commitment to justice. At Sahkar Sarathi, we pride ourselves on building long-term relationships based on shared values and exceptional results.'
   }
 ];

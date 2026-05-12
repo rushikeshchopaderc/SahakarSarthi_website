@@ -68,7 +68,9 @@ export default function About() {
               </div>
             </div>
 
-
+            <button className="bg-brand-navy hover:bg-brand-navy/90 text-white px-10 py-5 text-sm font-bold uppercase tracking-widest-plus transition-all">
+              Discover More
+            </button>
           </motion.div>
         </div>
       </div>

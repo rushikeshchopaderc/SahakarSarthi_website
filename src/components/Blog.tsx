@@ -9,7 +9,7 @@ const posts = [
     excerpt: 'Understanding why having a specialized legal advisor is crucial for cooperative societies and individual rights.',
     date: 'March 30, 2024',
     author: 'Admin',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600&h=400'
+    image: '/img/img1.jpeg'
   },
   {
     id: 'revenue-court-expectations',
@@ -25,7 +25,7 @@ const posts = [
     excerpt: 'Key factors to consider when selecting a legal partner for your trust or cooperative organization.',
     date: 'April 25, 2024',
     author: 'Ad. Mahendra',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=600&h=400'
+    image: '/img/img2.jpeg'
   }
 ];
 
