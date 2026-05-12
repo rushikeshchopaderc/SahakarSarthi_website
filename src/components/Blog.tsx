@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import blogImg18 from '../assets/images/img18.jpeg';
 
 const posts = [
   {
@@ -18,7 +17,7 @@ const posts = [
     excerpt: 'A comprehensive guide on the procedures and documentation required for revenue and land matter appeals.',
     date: 'April 12, 2024',
     author: 'Ad. Mahendra',
-    image: blogImg18
+    image: new URL('../assets/img/img18.jpeg', import.meta.url).href
   },
   {
     id: 'choosing-legal-advisor',
@@ -58,7 +57,6 @@ export default function Blog() {
                   src={post.image} 
                   alt={post.title} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-4 left-4 bg-brand-gold text-brand-navy px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
                   Legal Advice

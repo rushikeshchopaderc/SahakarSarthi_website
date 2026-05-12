@@ -27,7 +27,7 @@ export default function Contact() {
                 </div>
                 <div>
                    <span className="block text-[10px] uppercase tracking-widest font-bold text-brand-navy/40 mb-1">Call Us Anywhere</span>
-                   <span className="text-xl font-serif text-brand-navy">+(5) 765-850-975</span>
+                   <span className="text-xl font-serif text-brand-navy">+91 9225811999</span>
                 </div>
               </div>
               <div className="flex gap-6">
@@ -64,7 +64,7 @@ export default function Contact() {
               width="100%" 
               height="700" 
               style={{ border: 'none' }}
-              title="SahakarSarthi Contact Form"
+              title="Sahkar Sarathi Contact Form"
             ></iframe>
             
             <script async src="https://tally.so/widgets/embed.js"></script>

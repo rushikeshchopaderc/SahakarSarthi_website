@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion';
 import { Facebook, Twitter, Linkedin, MapPin } from 'lucide-react';
-import principalImg from '../assets/images/img17.jpeg';
 
 const member = {
   name: 'Ad. Mahendra Suryawanshi',
   role: 'Regional Legal Advisor, BJP, Nashik',
   address: 'DREAMCITI CHS, Samta Nagar, Nashik, Maharashtra 422006',
-  image: principalImg
+  image: new URL('../assets/img/img17.jpeg', import.meta.url).href
 };
 
 export default function Team() {
@@ -34,7 +33,6 @@ export default function Team() {
                 src={member.image} 
                 alt={member.name} 
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
               />
             </div>
             

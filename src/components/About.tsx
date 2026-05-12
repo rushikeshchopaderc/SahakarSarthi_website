@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import aboutImg from '../assets/images/img13.jpeg';
 
 export default function About() {
   return (
@@ -15,10 +14,9 @@ export default function About() {
              {/* Main Image */}
             <div className="relative z-10 p-4 bg-white shadow-2xl">
               <img 
-                src={aboutImg} 
+                src={new URL("../assets/img/img13.jpeg", import.meta.url).href} 
                 alt="Law Library" 
                 className="w-full transition-all duration-700 hover:scale-105"
-                referrerPolicy="no-referrer"
               />
             </div>
             
@@ -39,7 +37,7 @@ export default function About() {
             transition={{ delay: 0.2 }}
           >
             <span className="inline-block text-brand-gold font-semibold uppercase tracking-widest text-xs mb-4">
-              About SahakarSarthi
+              About Sahkar Sarathi
             </span>
             <h2 className="text-4xl md:text-5xl font-serif text-brand-navy mb-8 leading-snug">
               Why Trust Our Firm For <br />

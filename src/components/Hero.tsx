@@ -1,17 +1,14 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import heroImg from '../assets/images/img14.jpeg';
-
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center bg-brand-navy overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src={heroImg} 
+          src={new URL("../assets/img/img14.jpeg", import.meta.url).href} 
           alt="Law Firm" 
-          className="w-full h-full object-cover opacity-30"
-          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/60 to-transparent"></div>
       </div>
@@ -24,7 +21,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block text-brand-gold font-semibold uppercase tracking-widest-plus text-xs mb-6">
-              Welcome to SahakarSarthi
+              Welcome to Sahkar Sarathi
             </span>
             <h1 className="text-6xl md:text-8xl font-serif text-white leading-tight mb-8">
               Empowering Your <br />

@@ -2,7 +2,6 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import { useEffect } from 'react';
-import blogImg18 from '../assets/images/img18.jpeg';
 
 const posts = [
   {
@@ -20,7 +19,7 @@ const posts = [
     excerpt: 'A comprehensive guide on the procedures and documentation required for revenue and land matter appeals.',
     date: 'April 12, 2024',
     author: 'Ad. Mahendra',
-    image: blogImg18,
+    image: new URL('../assets/img/img18.jpeg', import.meta.url).href,
     content: 'Revenue courts handle matters related to land records, mutation entries, and agrarian disputes. When approaching a Revenue Court, whether it is the Tehsildar or the Sub-Divisional Officer, documentation is key. You should be prepared with historical 7/12 extracts, mutation records (Ferfar), and relevant sale deeds or inheritance certificates. The process typically involves a local inquiry and a formal hearing. Understanding the hierarchy of these courts—from the Tehsildar up to the Divisional Commissioner—is vital for a successful appeal strategy.'
   },
   {
@@ -30,7 +29,7 @@ const posts = [
     date: 'April 25, 2024',
     author: 'Ad. Mahendra',
     image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200&h=600',
-    content: 'Selecting the right legal partner is one of the most critical decisions for any organization. Look for expertise in your specific domain—general practice is rarely enough for complex cooperative or trust matters. Consider their track record in local courts and their familiarity with regional administrative bodies. Beyond technical skill, choose someone who prioritizes transparent communication and demonstrates a genuine commitment to justice. At SahakarSarthi, we pride ourselves on building long-term relationships based on shared values and exceptional results.'
+    content: 'Selecting the right legal partner is one of the most critical decisions for any organization. Look for expertise in your specific domain—general practice is rarely enough for complex cooperative or trust matters. Consider their track record in local courts and their familiarity with regional administrative bodies. Beyond technical skill, choose someone who prioritizes transparent communication and demonstrates a genuine commitment to justice. At Sahkar Sarathi, we pride ourselves on building long-term relationships based on shared values and exceptional results.'
   }
 ];
 
@@ -61,7 +60,6 @@ export default function BlogDetail() {
               src={post.image} 
               alt={post.title} 
               className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
             />
           </div>
           

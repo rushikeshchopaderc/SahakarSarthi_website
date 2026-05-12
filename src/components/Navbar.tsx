@@ -19,9 +19,17 @@ export default function Navbar() {
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, id: string) => {
     e.preventDefault();
+    if (id === 'hero') {
+      setIsOpen(false);
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      return;
+    }
+    
     if (location.pathname !== '/') {
       navigate('/#' + id);
-      // Let the home page handle the scroll on mount
       return;
     }
     
@@ -47,59 +55,43 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="hidden lg:block bg-brand-navy text-white text-xs py-2 px-8 border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2 italic">
-              <MapPin size={14} className="text-brand-gold" /> Samta Nagar, Nashik, India
-            </span>
-            <span className="flex items-center gap-2 italic">
-              <Mail size={14} className="text-brand-gold" /> info@sahakarsarthi.in
-            </span>
-          </div>
-          <div className="flex items-center gap-4">
-             <span className="flex items-center gap-2 font-semibold">
-              <Phone size={14} className="text-brand-gold" /> +(5) 765-850-975
-            </span>
-          </div>
-        </div>
-      </div>
-
       <nav 
         className={`sticky top-0 z-50 transition-all duration-300 bg-brand-navy shadow-xl py-4`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-serif font-bold text-white tracking-widest uppercase">SahakarSarthi</span>
+        <div className="max-w-[1400px] mx-auto px-6 flex justify-between items-center lg:grid lg:grid-cols-12 gap-4">
+          <Link to="/" className="flex items-center gap-2 lg:col-span-3">
+            <span className="text-base md:text-lg lg:text-xl font-serif font-bold text-white tracking-tight lg:tracking-wider uppercase whitespace-nowrap">Sahkar Sarathi</span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center justify-center gap-1 xl:gap-8 lg:col-span-6">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
                 href={`#${link.href}`}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-sm font-medium text-white/80 hover:text-brand-gold transition-colors tracking-wide"
+                className="text-[11px] xl:text-sm font-bold text-white/70 hover:text-brand-gold transition-all tracking-tight xl:tracking-[0.2em] uppercase whitespace-nowrap px-1"
               >
                 {link.name}
               </a>
             ))}
-            <button 
-              onClick={(e) => scrollToSection(e, 'contact')}
-              className="bg-brand-gold hover:bg-brand-gold/90 text-brand-navy px-6 py-2.5 rounded-none text-xs font-bold uppercase transition-all tracking-widest"
-            >
-              Consultation
-            </button>
           </div>
 
-          {/* Mobile Toggle */}
-          <button 
-            className="lg:hidden text-white"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          <div className="flex justify-end items-center gap-4 lg:col-span-3">
+            <button 
+              onClick={(e) => scrollToSection(e, 'contact')}
+              className="hidden lg:block bg-brand-gold hover:bg-brand-gold/90 text-brand-navy px-2 xl:px-6 py-2 rounded-none text-[10px] xl:text-[12px] font-bold uppercase transition-all tracking-tighter xl:tracking-[0.2em] shadow-lg hover:shadow-brand-gold/20 whitespace-nowrap"
+            >
+              Consult Now
+            </button>
+            
+            {/* Mobile Toggle */}
+            <button 
+              className="lg:hidden text-white p-2"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Nav */}

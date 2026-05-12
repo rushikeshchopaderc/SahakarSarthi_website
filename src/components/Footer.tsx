@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-16 mb-20">
           <div className="lg:col-span-4">
-            <h3 className="text-3xl font-serif font-bold tracking-widest uppercase mb-8">SahakarSarthi</h3>
+            <h3 className="text-3xl font-serif font-bold tracking-widest uppercase mb-8">Sahkar Sarathi</h3>
             <p className="text-white/50 leading-relaxed mb-8">
               Providing expert legal solutions for cooperative societies, public trusts, and land revenue matters since 1998. Committed to justice and specialized advocacy.
             </p>
@@ -49,7 +49,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-12 flex flex-col md:row justify-between items-center gap-6">
           <p className="text-xs text-white/30 tracking-widest uppercase">
-            © 2024 SahakarSarthi Legal Services. All rights reserved.
+            © 2024 Sahkar Sarathi Legal Services. All rights reserved.
           </p>
           <button 
             onClick={scrollToTop}
