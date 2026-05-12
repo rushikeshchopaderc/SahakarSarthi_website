@@ -2,13 +2,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const images = import.meta.glob('../assets/img/img*.jpeg', { eager: true, as: 'url' });
 const galleryImages = [
-  'img1', 'img2', 'img3', 'img4', 
-  'img5', 'img6', 'img7', 'img8', 
-  'img9', 'img10', 'img11', 'img12', 
-  'img15', 'img16'
-].map(key => images[`../assets/img/${key}.jpeg`]);
+  '/img/img1.jpeg', '/img/img2.jpeg', '/img/img3.jpeg', '/img/img4.jpeg', 
+  '/img/img5.jpeg', '/img/img6.jpeg', '/img/img7.jpeg', '/img/img8.jpeg', 
+  '/img/img9.jpeg', '/img/img10.jpeg', '/img/img11.jpeg', '/img/img12.jpeg', 
+  '/img/img15.jpeg', '/img/img16.jpeg'
+];
 
 export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);

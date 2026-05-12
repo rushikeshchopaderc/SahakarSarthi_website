@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src={new URL("../assets/img/img14.jpeg", import.meta.url).href} 
+          src="/img/img14.jpeg" 
           alt="Law Firm" 
           className="w-full h-full object-cover opacity-60"
         />

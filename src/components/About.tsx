@@ -14,7 +14,7 @@ export default function About() {
              {/* Main Image */}
             <div className="relative z-10 p-4 bg-white shadow-2xl">
               <img 
-                src={new URL("../assets/img/img13.jpeg", import.meta.url).href} 
+                src="/img/img13.jpeg" 
                 alt="Law Library" 
                 className="w-full transition-all duration-700 hover:scale-105"
               />

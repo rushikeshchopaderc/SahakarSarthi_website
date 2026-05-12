@@ -5,7 +5,7 @@ const member = {
   name: 'Ad. Mahendra Suryawanshi',
   role: 'Regional Legal Advisor, BJP, Nashik',
   address: 'DREAMCITI CHS, Samta Nagar, Nashik, Maharashtra 422006',
-  image: new URL('../assets/img/img17.jpeg', import.meta.url).href
+  image: '/img/img17.jpeg'
 };
 
 export default function Team() {
